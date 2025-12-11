@@ -1,157 +1,157 @@
 ECOVISION: Deep Learning Model for Seasonal Detection
-Batch: B-02 | Department of Computer Science & Engineering
-Srinivasa Ramanujan Institute of Technology, Ananthapuramu
+
+A multimodal Deep Learning system that predicts the current season using plant/tree images and environmental parameters such as temperature, humidity, precipitation, wind speed, soil moisture, and more.
+This project integrates CNN-based image analysis with machine learning on climatic data to create an accurate environmental prediction model.
+
 📌 Project Overview
 
-ECOVISION is an AI-powered deep learning system designed to detect the current season using a combination of:
+Seasonal changes affect agriculture, ecology, biotechnology research, and environmental monitoring. Traditional methods rely on manual observation or climate-only data, leading to errors and inconsistent results.
 
-Plant/Tree Image (Phenology)
-
-Environmental Parameters such as
-Temperature, Humidity, Precipitation, Pressure, Wind Speed, Soil Moisture, Solar Radiation, Cloud Visibility.
-
-The system uses CNN-based image analysis along with machine learning models for environmental data to provide accurate and reliable season prediction.
+ECOVISION solves this by combining:
+✔ Visual plant features using CNN
+✔ Environmental parameters using ML models
+✔ Fusion layer to improve prediction accuracy
 
 🎯 Objectives
-Primary Objective
+Primary Goal
 
-To develop a multimodal deep learning model that predicts the season by analyzing both plant images and climatic parameters.
+Build an AI model that predicts the season by combining plant/tree images and environmental data.
 
 Supporting Objectives
 
-To assist biotechnology and plant science research with accurate phenological season detection.
+Assist biotechnology and plant science research.
 
-To support environmental monitoring and ecological studies.
+Improve ecological and environmental monitoring.
 
-To help students and researchers understand seasonal patterns through an AI-powered system.
+Provide a learning tool for students and researchers.
 
-To achieve higher accuracy compared to traditional image-only or climate-only methods.
+Achieve higher accuracy than single-input models.
 
-🧩 Problem Statement
+🧠 Methodology (Proposed System)
 
-Traditional seasonal identification methods depend on:
-✔ Manual plant observation
-✔ Isolated weather reports
+The ECOVISION system consists of:
 
-These approaches often lead to human error, subjectivity, and inconsistent results.
-Existing research either:
+1️⃣ Image Processing Module
 
-Uses only plant images, ignoring weather conditions, or
+Upload plant/tree image
 
-Uses only weather parameters, ignoring biological changes in plants.
+CNN extracts:
 
-There is no unified system that combines both.
+Leaf texture
 
-ECOVISION solves this by integrating plant phenology + climatic data to produce a highly accurate season classifier.
+Color variation
 
-📚 Literature Survey (Summary)
+Dryness level
 
-Key research that supports this project:
+Flowering/fruiting stages
 
-Singh et al., 2021 – CNN for plant leaf seasonal classification.
+2️⃣ Environmental Parameter Module
 
-Zhou et al., 2021 – Machine learning using environmental factors for season detection.
-
-Das & Sen, 2020 – Computer vision for studying plant phenology.
-
-Rai & Kaur, 2022 – Deep learning models for environmental and seasonal pattern prediction.
-
-These studies justify the need for a multimodal AI system like ECOVISION.
-
-🔧 Proposed System Architecture
-1. Image Processing Module (CNN)
-
-Extracts features such as leaf
-
-Color
-
-Texture
-
-Dryness
-
-Flowering/Fruiting patterns
-
-2. Environmental Data Module
-
-Processes parameters:
+Processes:
 
 Temperature
 
 Humidity
 
-Wind speed
-
 Precipitation
 
-Pressure
+Wind speed
 
-Soil Moisture
+Atmospheric pressure
 
-Cloud Visibility
+Soil moisture
 
-3. Feature Fusion Layer
+Cloud visibility
 
-Combines image-based features + environmental data to strengthen prediction accuracy.
+Solar radiation
 
-4. Prediction Output
+3️⃣ Feature Fusion Layer
 
-Displays the predicted season
+Combines outputs from both modules for improved accuracy.
 
-Provides a confidence score
+4️⃣ Output
 
-User-friendly interface for uploading image + inputting parameters
+Predicted Season
 
-🏗️ Tech Stack
+Confidence Score
 
-Python
-
-TensorFlow / Keras (CNN Model)
-
-Scikit-learn (Machine Learning)
-
-Flask / Streamlit (Frontend UI)
-
-NumPy, Pandas, Matplotlib
-
-📂 Project Structure (Suggested)
+📂 Project Structure
 ECOVISION/
 │── dataset/
 │── models/
+│── notebooks/
 │── src/
-│   ├── cnn_model.py
-│   ├── data_processing.py
+│   ├── image_model.py
+│   ├── climate_model.py
 │   ├── fusion_model.py
-│   ├── predict.py
+│   └── predict.py
 │── app/
-│   ├── ui.py
-│── results/
+│   └── interface.py
 │── README.md
 │── requirements.txt
+│── results/
 
-📈 Applications
+📊 Literature Survey (Summary)
 
-Agriculture planning
+Season Classification using CNN on leaf images
+Supports plant-based visual prediction methods.
 
-Ecological and biodiversity research
+Environmental data–based season detection
+Shows that parameters like temperature and rainfall significantly affect seasonal changes.
 
-Seasonal phenology studies
+Phenology detection using Computer Vision
+Confirms the link between plant biological stages and seasons.
 
-Weather-based research
+Deep learning for weather and seasonal pattern prediction
+Proves deep learning outperforms traditional ML.
 
-Education and academic projects
+(References available in PPT) 
 
-📖 References
+zerothreview_team_B2_ppt
 
-(As per PPT)
+📈 Results
 
-Singh K. S. & Gupta R., Season Classification Using Plant Leaf Images and CNN Models, 2021
+Hybrid model significantly outperforms image-only or climate-only models.
 
-Zhou M., Li Y., Chen X., Environmental Feature-Based Season Detection, IEEE, 2021
+Accurate seasonal prediction achieved through multimodal fusion.
 
-Das A., Sen N., Plant Phenology Detection Using Computer Vision, 2020
+🔧 Tech Stack
 
-Rai P., Kaur S., Deep Learning for Seasonal Pattern Prediction, 2022
+Python
 
-🔗 GitHub Dashboard Link
+TensorFlow / PyTorch
 
-Repository: https://github.com/Sharath599/Batch-B02-2025-2026
+OpenCV
+
+NumPy / pandas
+
+Flask / Streamlit (for UI)
+
+▶️ How to Run
+pip install -r requirements.txt
+python src/predict.py
+
+
+Or run the interface:
+
+python app/interface.py
+
+🧪 Sample Input
+
+Plant/tree image (JPEG/PNG)
+
+Environmental values:
+
+temp = 28°C
+
+humidity = 62%
+
+soil moisture = 40%
+
+wind = 3.4 m/s
+
+cloud visibility = 60%
+
+📤 Output Example
+Predicted Season: Summer
+Confidence: 92.4%
